@@ -802,6 +802,9 @@ class Window:
             lambda: self._update_menu_state('file_menu')
         )
         self.main_menu.addMenu(self.file_menu)
+        self.sample_menu = build_qmodel_menu(
+            MenuId.FILE_SAMPLES, title="samp", parent=self._qt_window
+        )
         # view menu
         self.view_menu = build_qmodel_menu(
             MenuId.MENUBAR_VIEW, title=trans._('&View'), parent=self._qt_window
